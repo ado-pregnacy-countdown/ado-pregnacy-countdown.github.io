@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html style="background-color: #00cfffd6;">
+    <head>
+        <title>Get the number of days between two dates using jQuery - Clue Mediator</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <style>
+        td 
+        {
+            text-align: center !important;
+            font-size: larger;
+            font-weight: bolder;
+        }
+    </style>
+    
+    <body>
+        <br />
+        <br />
+        <div >
+            <div class="box" >
+                <center>
+                    <table class="table">
+                        <tr><td class="no-days"></td><td class="no-weeks"></td><td class="no-months"></td></tr>
+                        <tr><td>Days</td><td>Weeks</td><td>Months</td></tr>
+                    </table>
+                    <p>They journey stared on 20 Dec 2021</p>
+                </center>
+                </div>
+        </div>
+        
+        <script>
+            $(document).ready(function()
+            {
+                var fromdate = '2021-12-20';
+                var dt1 = new Date(fromdate);
+                var dt2 = new Date();
+                var time_difference = dt2.getTime() - dt1.getTime();
+                var no_days = Math.round(time_difference / (1000 * 60 * 60 * 24));
+                var no_weeks =  (no_days/7).toFixed(2);
+                var no_months =  (no_days/30).toFixed(2);
+                $(".no-days").html(no_days);
+                $(".no-weeks").html(no_weeks);
+                $(".no-months").html(no_months);
+            });
+        </script>
+</body>
+</html>
