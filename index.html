@@ -47,7 +47,7 @@
                 var time_difference = dt2.getTime() - dt1.getTime();
                 var no_days = Math.round(time_difference / (1000 * 60 * 60 * 24));
                 var no_weeks =  (no_days/7).toFixed(2);
-                var no_months =  (no_days/30).toFixed(2);
+                var no_months =  (no_days/28).toFixed(2);
                 $(".no-days").html(no_days);
                 $(".no-weeks").html(no_weeks);
                 $(".no-months").html(no_months);
